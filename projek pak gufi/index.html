@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WIKIIT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wiki-shell">
+    <header class="wiki-header">
+      <div class="header-left">
+        <button class="menu-button" aria-label="Menu">☰</button>
+        <div class="site-brand">
+          <div class="brand-title">WIKIIT</div>
+          <div class="brand-subtitle">25 years of the free encyclopedia</div>
+        </div>
+      </div>
+
+      <div class="header-search">
+        <form id="searchForm">
+          <input id="searchInput" type="search" placeholder="Search" aria-label="Search WIKIIT">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+
+      <div class="header-right">
+        <button class="action-link">Donate</button>
+        <button class="action-link">Create account</button>
+        <button class="action-link">Log in</button>
+      </div>
+    </header>
+
+    <div class="wiki-topbar">
+      <div class="topbar-left">
+        <span class="topbar-link">Project page</span>
+        <span class="topbar-link">Talk</span>
+      </div>
+      <div class="topbar-right">
+        <span class="topbar-link active">Read</span>
+        <span class="topbar-link" onclick="location.href='Tree.html'">Tree</span>
+        <span class="topbar-link">View source</span>
+        <span class="topbar-link">View history</span>
+        <span class="topbar-link">Tools</span>
+      </div>
+    </div>
+
+    <main class="wiki-main">
+      <aside class="wiki-sidebar">
+        <section class="sidebar-card">
+          <div class="sidebar-title">Contents</div>
+          <button class="sidebar-toggle">hide</button>
+          <div class="sidebar-note">Navigasi artikel sekarang tersedia di tengah halaman.</div>
+        </section>
+      </aside>
+
+      <section class="wiki-content">
+        <h1 id="pageTitle">WIKIIT Graph</h1>
+        <p class="page-description">Klik judul artikel di daftar untuk menavigasi. Semua data terhubung melalui hyperlink internal.</p>
+
+        <section class="article-links">
+          <div class="section-title">Daftar Artikel</div>
+          <div id="articleList" class="article-list"></div>
+        </section>
+
+        <article id="articleDetail" class="article-detail"></article>
+      </section>
+
+      <aside class="wiki-sidebar sidebar-right">
+        <section class="sidebar-card">
+          <div class="sidebar-title">Related</div>
+          <div id="relatedLinks"></div>
+        </section>
+      </aside>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
